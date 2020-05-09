@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form, Header, Input, Button, Message } from 'semantic-ui-react';
 
 // GraphQL
-import { useLazyQuery, useMutation } from '@apollo/react-hooks';
+import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
 const SUBSCRIBE = gql`

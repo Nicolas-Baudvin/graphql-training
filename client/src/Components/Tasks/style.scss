@@ -1,0 +1,42 @@
+.tasks {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+
+    .checked {
+        background-color: rgba(15, 177, 241, .6);
+
+        p {
+            text-decoration: line-through;
+        }
+    }
+
+    &-item {
+        background-color: rgba(15, 177, 241, 1);
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2em;
+        margin: .5em 0;
+        cursor: pointer;
+
+        .checkbox {
+            margin-right: 1em !important;
+        }
+    }
+}
+
+.main {
+    height: max-content !important;
+    &-title {
+        width: 100%;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+            sans-serif;
+    }
+    &-inputs {
+        margin-top: 1em !important;
+    }
+}

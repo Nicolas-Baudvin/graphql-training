@@ -6,12 +6,11 @@ mongoose.Promise = global.Promise;
 
 const connection = mongoose.connect(process.env.MONGO_CONNECT, {
     autoIndex: true,
-    reconnectTries: Number.MAX_VALUE,
-    reconnectInterval: 500,
     poolSize: 50,
     bufferMaxEntries: 0,
     keepAlive: 120,
     useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 
 mongoose.set('useCreateIndex', true);

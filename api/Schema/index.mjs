@@ -6,13 +6,12 @@ import db from '../Utils/db.mjs';
 
 const schemaComposer = new SchemaComposer();
 
-import { UserQuery } from './user.mjs';
-import { UserMutation } from './user.mjs';
-import graphql from 'graphql';
-const { GraphQLObjectType, GraphQLString } = graphql;
+import { UserQuery, UserMutation } from './user.mjs';
+import { TaskMutation, TaskQuery } from './task.mjs';
 
 schemaComposer.Query.addFields({
     ...UserQuery,
+    ...TaskQuery,
     connectUser: {
         schemaComposer,
         name: "connectUser",
@@ -29,7 +28,8 @@ schemaComposer.Query.addFields({
 });
 
 schemaComposer.Mutation.addFields({
-    ...UserMutation
+    ...UserMutation,
+    ...TaskMutation
 });
 
 export default schemaComposer.buildSchema();

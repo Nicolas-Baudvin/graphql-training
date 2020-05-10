@@ -19,6 +19,7 @@ export default async (parentValue, args) => {
     return {
         username: user.username,
         firstname: user.firstname,
+        userID: user._id,
         token
     };
 };

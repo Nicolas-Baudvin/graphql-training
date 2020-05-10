@@ -1,5 +1,4 @@
-import { User, UserTC} from '../Models/user.mjs';
-import auth from '../Schema/resolvers/auth.mjs';
+import { UserTC } from '../Models/user.mjs';
 
 const UserQuery = {
     userById: UserTC.getResolver('findById'),
@@ -22,4 +21,4 @@ const UserMutation = {
     userRemoveMany: UserTC.getResolver('removeMany')
 };
 
-export { UserQuery, UserMutation};
+export { UserQuery, UserMutation };

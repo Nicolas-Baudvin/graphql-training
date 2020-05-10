@@ -3,10 +3,6 @@ const { composeWithMongoose } = CWM;
 import timestamps from 'mongoose-timestamp';
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
-import GraphQlCompose from 'graphql-compose';
-const { ObjectTypeComposer } = GraphQlCompose;
-import Graphql from 'graphql';
-const { GraphQLString } = Graphql
 
 const UserSchema = new mongoose.Schema({
     username: { type: String, trim: true, required: true },
